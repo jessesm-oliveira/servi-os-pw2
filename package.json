@@ -1,0 +1,14 @@
+{
+  "name": "servi-os-pw2",
+  "version": "1.0.0",
+  "description": "desenvolvendo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JESSÉ OLIVEIRA",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.1.1"
+  }
+}
