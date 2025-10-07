@@ -1,8 +1,8 @@
 function home () {
-  return (
-    <div>
-      <h1> TESTE DE PAGINA</h1>
-    </div>
-  );
+  return <> <h2> FILMES </h2>
+
+<p>LISTAGEM DE FILMES </p>
+</>
+
 }
 export default home;
