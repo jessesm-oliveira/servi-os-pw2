@@ -4,9 +4,6 @@ import { filmes } from "../data/filmes.js";
 
 
 function home () {
-  console.log(filmes)
-
-  const primeirofilme = filmes[0]
 
   const estiloimagem={
        width:"300px"
@@ -16,19 +13,29 @@ function home () {
 return <> <h2> FILMES </h2>
 
    <ul>
+          {
+               filmes.map((filme)=>{ //sempre que usar map, usar key
 
-        <li>
+                    return ( 
+                    <li key={`card-filme-${filme.id}`}> 
 
-              <p> NOME DO FILMEs: </p>
-              <p> {primeirofilme.titulo} </p>
-              <p>ano: {primeirofilme.ano}</p>
-              <p>gênero: {primeirofilme.genero}</p>
-              <p> nota: {primeirofilme.nota}</p>
-              
-              <img style={estiloimagem} src={primeirofilme.poster}></img>
+                         <p> NOME DO FILME: </p>
+                         <p> {filme.titulo} </p>
+                         <p>ano: {filme.ano}</p>
+                         <p>gênero: {filme.genero}</p>
+                         <p> nota: {filme.nota}</p>
+
+                         <img style={estiloimagem} src={filme.poster}></img> 
 
 
-        </li>
+                     </li>
+
+
+                         );
+
+               })
+          }
+        
 
 
    </ul>
