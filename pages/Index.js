@@ -1,23 +1,16 @@
 
 import { filmes } from "../data/filmes.js";
 
-
-
-function home () {
-
-  const estiloimagem={
+function CardFilme({filme}) { 
+     
+      const estiloimagem={
        width:"300px"
 
   };
+     
+     return(
 
-return <> <h2> FILMES </h2>
-
-   <ul>
-          {
-               filmes.map((filme)=>{ //sempre que usar map, usar key
-
-                    return ( 
-                    <li key={`card-filme-${filme.id}`}> 
+          <li >
 
                          <p> NOME DO FILME: </p>
                          <p> {filme.titulo} </p>
@@ -29,6 +22,26 @@ return <> <h2> FILMES </h2>
 
 
                      </li>
+
+          
+
+     );
+
+}
+
+function home () {
+
+ 
+
+return <> <h2> FILMES </h2>
+
+   <ul>
+          {
+               filmes.map((filme)=>{ 
+
+                    return ( 
+                    
+                         <CardFilme key={`card-filme-${filme.id}`} filme={filme}/>
 
 
                          );
