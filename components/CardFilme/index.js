@@ -12,7 +12,7 @@ export default function CardFilme({filme}) {
      
       const estiloimagem={
        width:"200px",
-       height: "100%",
+       height: "100%",  
        ObjectFit: 'cover',
        opacity: 1,
 
